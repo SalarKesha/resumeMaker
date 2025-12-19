@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="{{ dir }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <div class="title">
+          <span class="fullname">{{ fullname }}</span>
+          <span class="role">{{ role }}</span>
+        </div>
+        <ul class="links">
+          {% for link in links %}
+          <li class="item">
+            <a href="{{ link.url or '#' }}">{{ link.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="about">{{ about }}</div>
+      </div>
+      <div class="sections">
+        <section class="experience">
+          <p class="legend">Work Experience</p>
+          <ul class="list">
+            {% for item in experiences%}
+            <li class="item">
+              <p class="title">{{ item.title }}</p>
+              {% if item.sub_title %}
+              <p class="sub-title">{{ item.sub_title }}</p>
+              {% endif %} {% if item.role %}
+              <p class="role">{{ item.role }}</p>
+              {% endif %}
+              <p class="description">{{ item.description }}</p>
+              {% if item.stack %}
+              <div class="stack-container">
+                <span class="title">Tech Stack:</span>
+                <span class="content">{{ item.stack }}</span>
+              </div>
+              {% endif %} {% if item.domain %}
+              <div class="link-container">
+                <span class="title">Link:</span>
+                <a href="https://{{ item.domain }}" class="content"
+                  >{{ item.domain }}</a
+                >
+              </div>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        </section>
+        <section class="education">
+          <p class="legend">Education</p>
+          <ul class="list">
+            {% for item in educations%}
+            <li class="item">
+              <div class="container">
+                <span class="field">{{ item.field }}</span>
+                <span>|</span>
+                <span class="location">{{ item.location }}</span>
+                <span class="degree">{{ item.degree }}</span>
+              </div>
+              <p class="date">{{ item.date }}</p>
+            </li>
+            {% endfor %}
+          </ul>
+        </section>
+        <section class="hard-skill">
+          <p class="legend">Hard Skills</p>
+          <ul class="list">
+            {% for item in hard_skills %}
+            <li class="item">
+              <p class="title">{{ item.title }}<span>:</span></p>
+              <span class="content">{{ item.content }}</span>
+            </li>
+            {% endfor %}
+          </ul>
+        </section>
+        <section class="soft-skill">
+          <p class="legend">Soft Skills</p>
+          <ul class="list">
+            {% for item in soft_skills %}
+            <li class="item">{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
