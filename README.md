@@ -17,8 +17,14 @@ en_context: Context = {
     "role": "...",
     "links": [
         {
-            "title": "...",
-            "url": "...",
+            "title": "Github",
+            "url": "https://github.com/SalarKesha",
+            "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+        },
+        {
+            "title": "Linkedin",
+            "url": "https://www.linkedin.com/in/salar-keshavarzi/",
+            "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg",
         },
     ],
     "about": """...""",
@@ -50,6 +56,9 @@ en_context: Context = {
 
 LANGS = {"en": en_context}
 ```
+
+Each contact link can include an `icon` URL. Omit `icon` or set it to `None`
+to show the link title without an icon.
 
 3 - Render templates
 ```shell
