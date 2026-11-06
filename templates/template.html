@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ lang }}" dir="{{ dir }}">
   <head>
     <meta charset="UTF-8" />
@@ -61,6 +61,7 @@
                 <span class="field">{{ item.field }}</span>
                 <span>|</span>
                 <span class="location">{{ item.location }}</span>
+                <span>|</span>
                 <span class="degree">{{ item.degree }}</span>
               </div>
               <p class="date">{{ item.date }}</p>
@@ -68,22 +69,14 @@
             {% endfor %}
           </ul>
         </section>
-        <section class="hard-skill">
-          <p class="legend">Hard Skills</p>
+        <section class="skills">
+          <p class="legend">Skills</p>
           <ul class="list">
-            {% for item in hard_skills %}
+            {% for item in skills %}
             <li class="item">
-              <p class="title">{{ item.title }}<span>:</span></p>
-              <span class="content">{{ item.content }}</span>
+              <span>{{ item.name }}</span>
+              <img src="{{ item.icon if item.icon else ''}}" />
             </li>
-            {% endfor %}
-          </ul>
-        </section>
-        <section class="soft-skill">
-          <p class="legend">Soft Skills</p>
-          <ul class="list">
-            {% for item in soft_skills %}
-            <li class="item">{{ item }}</li>
             {% endfor %}
           </ul>
         </section>

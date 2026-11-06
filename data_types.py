@@ -1,9 +1,10 @@
-from typing import TypedDict, List
+from typing import TypedDict
 
 
 class Link(TypedDict):
     title: str
     url: str | None
+    icon: str | None
 
 
 class Experience(TypedDict):
@@ -22,9 +23,9 @@ class Education(TypedDict):
     date: str
 
 
-class HardSkill(TypedDict):
-    title: str
-    content: str
+class Skill(TypedDict):
+    name: str
+    icon: str | None
 
 
 class Context(TypedDict):
@@ -32,9 +33,8 @@ class Context(TypedDict):
     dir: str
     fullname: str
     role: str
-    links: List[Link]
+    links: list[Link]
     about: str
-    experiences: List[Experience]
-    educations: List[Education]
-    hard_skills: List[HardSkill]
-    soft_skills: List[str]
+    experiences: list[Experience]
+    educations: list[Education]
+    skills: list[Skill]

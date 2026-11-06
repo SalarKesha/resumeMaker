@@ -40,11 +40,11 @@ en_context: Context = {
             "date": "...",
         }
     ],
-    "hard_skills": [
-        {"title": "...", "content": "..."},
-    ],
-    "soft_skills": [
-        "...",
+    "skills": [
+        {
+            "name": "...",
+            "icon": "...",
+        }
     ],
 }
 
@@ -53,6 +53,6 @@ LANGS = {"en": en_context}
 
 3 - Render templates
 ```shell
-poetry run python run.py
+poetry run python main.py
 ```
 

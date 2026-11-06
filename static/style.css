@@ -126,27 +126,16 @@ section.education .list .item .container .field {
   font-weight: 500;
 }
 
-section.education .list .item .container span:last-child {
-  margin: auto;
-}
 
-section.hard-skill .list {
-  list-style: circle;
-}
-
-section.hard-skill .list .item {
-  padding-top: 0.8rem;
-  display: flex;
-  flex-direction: row;
-  gap: 0.3rem;
-}
-
-section.hard-skill .list .item .title {
-  font-weight: 500;
-}
-
-section.soft-skill .list .item {
+section.skills .list .item {
+  align-items: center;
+  justify-content: center;
   list-style: circle;
   font-weight: 500;
   padding-top: 0.8rem;
+}
+
+section.skills .list .item img {
+  width: 2rem;
+  height: 2rem;
 }
