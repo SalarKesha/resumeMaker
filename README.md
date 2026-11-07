@@ -33,7 +33,10 @@ en_context: Context = {
             "title": "...",
             "sub_title": "...",
             "role": "...",
-            "description": """...""",
+            "description": [
+                "Built and maintained scalable backend services.",
+                "Improved application performance and reliability.",
+            ],
             "stack": "...",
             "domain": "...",
         }

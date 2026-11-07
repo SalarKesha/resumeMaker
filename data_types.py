@@ -11,7 +11,7 @@ class Experience(TypedDict):
     title: str
     sub_title: str | None
     role: str | None
-    description: str
+    description: list[str]
     stack: str | None
     domain: str | None
 

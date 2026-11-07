@@ -57,7 +57,13 @@
                 {% if item.sub_title %}
                 <p class="mt-1 break-words text-xs text-slate-500 print:text-[10px]">{{ item.sub_title }}</p>
                 {% endif %}
-                <p class="mt-3 break-words text-pretty print:mt-2">{{ item.description }}</p>
+                {% if item.description %}
+                <ul class="mt-3 list-disc space-y-1.5 ps-4 print:mt-2 print:space-y-1">
+                  {% for point in item.description if point | trim %}
+                  <li class="break-words text-pretty">{{ point }}</li>
+                  {% endfor %}
+                </ul>
+                {% endif %}
                 {% if item.stack %}
                 <p class="mt-3 break-words text-xs leading-relaxed print:mt-2 print:text-[10px]">
                   <span class="font-semibold text-slate-700">Tech stack</span>
